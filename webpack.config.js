@@ -11,6 +11,14 @@ module.exports = {
     filename: "bundle.js",
     path: path.resolve(__dirname + "/build"),
   },
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname, "./build"),
+    },
+    port: 9000,
+    // open: true 추가 (브라우저 자동 실행)
+    open: true,
+  },
   // 웹팩 빌드 옵션으로 production은 최적화되어 빌드되어지는 특징을 가지고 있고 development는 빠르게 빌드하는 특징, none 같은 경우는 아무 기능 없이 웹팩으로 빌드
   mode: "none",
   module: {
