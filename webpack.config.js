@@ -2,6 +2,7 @@ const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   // 웹팩이 빌드할 파일을 알려주는 역할
@@ -64,7 +65,8 @@ module.exports = {
       ),
     }),
     new MiniCssExtractPlugin({
-      filename: "style.css",
+      filename: "style-test.css",
     }),
+    new CleanWebpackPlugin(),
   ],
 };
