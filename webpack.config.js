@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const webpack = require("webpack");
 
 module.exports = {
   // 웹팩이 빌드할 파일을 알려주는 역할
@@ -35,6 +36,14 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: "./public/index.html", // public/index.html 파일을 읽는다.
       filename: "index.html", // output으로 출력할 파일은 index.html 이다.
+    }),
+    // DefinePlugin으로 process.env.NODE_ENV 정의
+    // Webpack 5에서는 Node.js polyfill을 자동으로 제공하지 않으므로 DefinePlugin으로 환경 변수를 정의
+    // 실제 사용하는 환경 변수만 번들에 포함
+    new webpack.DefinePlugin({
+      "process.env.NODE_ENV": JSON.stringify(
+        process.env.NODE_ENV || "development",
+      ),
     }),
   ],
 };
