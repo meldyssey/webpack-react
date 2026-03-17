@@ -1,6 +1,9 @@
 {
   "name": "webpack-react",
   "packageManager": "yarn@4.6.0",
+  "scripts": {
+    "build": "webpack"
+  },
   "devDependencies": {
     "@babel/core": "^7.29.0",
     "@babel/preset-env": "^7.29.2",
