@@ -1,0 +1,6 @@
+// 바벨 (babel)은 ES6에서 ES5로 자바스크립트를 변환해주는 역할을 합니다.
+// 아래 내용은 바벨이 ES6와 리액트를 ES5로 변환할 수 있게 해준다는 내용입니다.
+
+{
+  "presets": ["@babel/preset-env", "@babel/preset-react"]
+}
