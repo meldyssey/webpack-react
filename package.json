@@ -2,8 +2,8 @@
   "name": "webpack-react",
   "packageManager": "yarn@4.6.0",
   "scripts": {
-    "build": "webpack",
-    "start": "webpack-dev-server --hot"
+    "build": "webpack --config ./config/webpack.config.prod",
+    "start": "webpack-dev-server --config ./config/webpack.config.dev --hot"
   },
   "devDependencies": {
     "@babel/core": "^7.29.0",
