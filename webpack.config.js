@@ -14,7 +14,7 @@ module.exports = {
   },
   devServer: {
     static: {
-      directory: path.resolve(__dirname, "./build"),
+      directory: path.resolve(__dirname, "/build"),
     },
     port: 9000,
     // open: true 추가 (브라우저 자동 실행)
